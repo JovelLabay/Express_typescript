@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+
+// NAVIGATION CONTAINER
+import { NavigationContainer } from "@react-navigation/native";
+import "react-native-gesture-handler";
+
+// NAVIGATION
+import { changeNavigationBar } from "./functions/navigationBar";
+
+// AUTHENTICATION LAYOUT
+import Authentication from "./src/layouts/Authentication";
+
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+import { NotifierWrapper } from "react-native-notifier";
 
 export default function App() {
+  // CHANGE NAVIGATION BAR ON THE FIRST LAUNCH
+  React.useEffect(() => {
+    changeNavigationBar();
+  }, []);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // REACT NAVIGATION WRAPPER
+    <NavigationContainer>
+      <NotifierWrapper>
+        <Authentication />
+      </NotifierWrapper>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

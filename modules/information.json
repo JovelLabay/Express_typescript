@@ -1,0 +1,6 @@
+{
+  "password_short": "Password is too short",
+  "password_mismatch": "Passwords do not match",
+  "email_required": "Email is required",
+  "password_valid": "Successful"
+}
