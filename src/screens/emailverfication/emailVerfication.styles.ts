@@ -6,12 +6,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.mainBackgroundColor,
   },
-  validationTitle: {
-    textAlign: "center",
-    marginVertical: 12,
-    fontSize: fontSizes.regular,
-    fontWeight: "bold",
-  },
   sendValidation: {
     position: "absolute",
     backgroundColor: colors.brandColor,
@@ -20,7 +14,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginVertical: 12,
-    bottom: 20,
+    bottom: 5,
     left: 20,
     right: 20,
   },
@@ -29,19 +23,6 @@ const styles = StyleSheet.create({
     fontSize: fontSizes.regular,
     fontWeight: "bold",
   },
-  textBtnValidation_two: {
-    color: colors.reduceWhite,
-    fontSize: fontSizes.regular,
-    fontWeight: "bold",
-    paddingVertical: 15,
-    textAlign: "center",
-  },
-  textBtnValidationTitle: {
-    color: colors.reduceWhite,
-    fontSize: fontSizes.big,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
 });
 
-export { styles };
+export default styles;

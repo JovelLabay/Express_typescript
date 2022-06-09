@@ -5,13 +5,13 @@ import { onAuthStateChanged, User } from "firebase/auth";
 
 import MainScreen from "../stacks/MainScreen";
 import AuthScreen from "../stacks/AuthScreen";
+import EmailValidationScreen from "../stacks/EmailValidationScreen";
 
 import { prolongSplash, showScreen } from "./../../functions/splashScreen";
 
-import { Text, View } from "react-native";
-import EmailVerfication from "../screens/emailverfication/EmailVerfication";
 import { NativeBaseProvider } from "native-base";
-import EmailValidationScreen from "../stacks/EmailValidationScreen";
+
+import { Text } from "native-base";
 
 export default function Authentication() {
   // STATE HOLDER FOR AUTHENTICATION

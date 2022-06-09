@@ -1,6 +1,7 @@
-import { View, Text } from "react-native";
 import React from "react";
-import { styles } from "./lineSeparator.styles";
+import { View, Text } from "react-native";
+
+import styles from "./lineSeparator.styles";
 
 export default function LineSeparator() {
   return (

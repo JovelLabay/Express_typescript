@@ -1,32 +1,30 @@
-import {
-  View,
-  Text,
-  TextInput,
-  Button,
-  TouchableOpacity,
-  KeyboardAvoidingView,
-} from "react-native";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
+
 import { Formik } from "formik";
-import { styles } from "./authForm.styles";
-import { Ionicons } from "@expo/vector-icons";
+
+import styles from "./authForm.styles";
 import { colors } from "../../../styles/styles";
-import LineSeparator from "../lineseparator/LineSeparator";
+
+import { Ionicons } from "@expo/vector-icons";
+import { Notifier, Easing } from "react-native-notifier";
+8;
+
 import { useNavigation } from "@react-navigation/native";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { AuthStackParamList } from "../../../modules/interface";
+
 import { authScreenNavigationType } from "../../../modules/interface";
+
 import {
   siginWithEmailPassword,
   validationOfPassword,
 } from "../../../functions/signInWithEmailPass";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../../firebase/firebase.config";
-import { Notifier, Easing, NotifierComponents } from "react-native-notifier";
+
+import LineSeparator from "../lineseparator/LineSeparator";
 import Notifying, { NotifyingSuccess } from "../notifier/Notifying";
 
 function LoginForm() {
   const [isPassWordVisible, setIsPasswordVisible] = useState(true);
+
   const password = useRef<TextInput | null>(null);
 
   const navigation = useNavigation<authScreenNavigationType>();
@@ -126,6 +124,7 @@ function LoginForm() {
 }
 function SigninForm() {
   const [isPassWordVisible, setIsPasswordVisible] = useState(true);
+
   const password = useRef<TextInput | null>(null);
   const confirmPassword = useRef<TextInput | null>(null);
 

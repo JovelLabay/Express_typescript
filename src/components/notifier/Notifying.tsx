@@ -1,7 +1,9 @@
-import { View, Text } from "react-native";
 import React from "react";
-import { styles } from "./notifier.styles";
+import { View, Text } from "react-native";
 
+import styles from "./notifier.styles";
+
+// NOTIFICATION FOR ERROR
 export default function Notifying({ description }: { description: string }) {
   return (
     <View style={styles.container}>
@@ -9,6 +11,7 @@ export default function Notifying({ description }: { description: string }) {
     </View>
   );
 }
+// NOTIFCATION FOR SUCCESS
 export function NotifyingSuccess({ description }: { description: string }) {
   return (
     <View style={styles.containerSuccess}>

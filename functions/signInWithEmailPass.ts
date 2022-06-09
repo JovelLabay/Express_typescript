@@ -3,9 +3,12 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
+
 import { EmailPassword } from "../modules/interface";
+
 import information from "../modules/information.json";
 
+// FUNCTION FOR SIGIN WITH FIREBASE
 function siginWithEmailPassword({ email, password }: EmailPassword) {
   const signNow = {
     email,
@@ -21,6 +24,7 @@ function siginWithEmailPassword({ email, password }: EmailPassword) {
   return signNow;
 }
 
+// VALIDATION BEFORE CREATING NEW EMAIL
 const validationOfPassword = (
   email: string,
   password: string,

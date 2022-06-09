@@ -3,7 +3,7 @@ import { colors, fontSizes } from "../../../styles/styles";
 
 const styles = StyleSheet.create({
   container: {
-    height: 40,
+    height: 50,
     backgroundColor: colors.error,
     marginHorizontal: 10,
     borderRadius: 5,
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { styles };
+export default styles;
